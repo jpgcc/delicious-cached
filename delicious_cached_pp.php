@@ -3,7 +3,7 @@
 Plugin Name: del.icio.us cached++
 Plugin URI: http://wordpress.org/extend/plugins/delicious-cached/
 Description: Outputs del.icio.us bookmarks. Uses Wordpress built-in MagpieRSS to retrieve and to cache.
-Version: 1.2.1
+Version: 1.3a
 Author: João Craveiro
 Author URI: http://www.jcraveiro.com/
 */
@@ -96,4 +96,73 @@ function deliciousTagsMarkup($tagsRaw, $username, $tags, $betweenTags) {
     }
     return implode($betweenTags,$result);
 }
-?> 
+
+
+function widget_deliciouspp_init() {
+	if (!function_exists('register_sidebar_widget')) return;
+
+	function widget_deliciouspp($args) {
+		
+		extract($args);
+
+		$options = get_option('widget_deliciouspp');
+		$title = $options['title'];
+		
+		echo $before_widget . $before_title . $title . $after_title;
+		echo '<ul>';
+		delicious_pp(
+		    $options['username'],
+		    $options['count'],
+		    $options['extended'],
+		    $options['tags'],
+		    $options['before'],
+		    $options['after'],
+		    $options['beforeExtended'],
+		    $options['afterExtended'],
+		    $options['beforeTags'],
+		    $options['betweenTags'],
+		    $options['afterTags']
+		    );
+		echo '</ul>';
+		echo $after_widget;
+	}
+
+	function widget_deliciouspp_control() {
+		$options = get_option('widget_deliciouspp');
+		if ( !is_array($options) )
+			$options = array(
+			'title'=>'del.icio.us',
+			'username'=>'',
+			'count'=>15,
+			'extended'=>1,
+			'tags'=>0,
+			'before'=>'<li>',
+			'after'=>'</li>',
+			'beforeExtended'=>'<p>',
+			'afterExtended'=>'</p>',
+			'beforeTags'=>'<p>',
+			'betweenTags'=>', ',
+			'afterTags'=>'</p>'
+			);
+		if ( $_POST['deliciouspp-submit'] ) {
+			$options['title'] = strip_tags(stripslashes($_POST['deliciouspp-title']));
+			$options['username'] = strip_tags(stripslashes($_POST['deliciouspp-username']));
+			// TBD: update other options
+			update_option('widget_deliciouspp', $options);
+		}
+
+		$title = htmlspecialchars($options['title'], ENT_QUOTES);
+		$username = htmlspecialchars($options['username'], ENT_QUOTES);
+		
+		echo '<p style="text-align:right;"><label for="deliciouspp-title">Title: <input style="width: 200px;" id="deliciouspp-title" name="deliciouspp-title" type="text" value="'.$title.'" /></label></p>';
+		echo '<p style="text-align:right;"><label for="deliciouspp-username">Username: <input style="width: 200px;" id="deliciouspp-username" name="deliciouspp-username" type="text" value="'.$username.'" /></label></p>';
+		echo '<input type="hidden" id="deliciouspp-submit" name="deliciouspp-submit" value="1" />';
+	}		
+
+	register_sidebar_widget('Delicious Cached++', 'widget_deliciouspp');
+	register_widget_control('Delicious Cached++', 'widget_deliciouspp_control', 300, 100);
+}
+
+add_action('plugins_loaded', 'widget_deliciouspp_init');
+
+?>
