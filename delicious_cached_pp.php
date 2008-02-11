@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: del.icio.us cached++
-Plugin URI: http://www.jcraveiro.com/v3/projectos/delicious-cached-pp/
+Plugin URI: http://wordpress.org/extend/plugins/delicious-cached/
 Description: Outputs del.icio.us bookmarks. Uses Wordpress built-in MagpieRSS to retrieve and to cache.
 Version: 1.2.1
 Author: João Craveiro
-Author URI: http://www.jcraveiro.com/v3/
+Author URI: http://www.jcraveiro.com/
 */
 
 /*
