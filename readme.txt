@@ -6,11 +6,11 @@ Requires at least: 2.0
 Tested up to: 2.3.1
 Stable tag: trunk
 
-Here is a short description of the plugin.  This should be no more than 150 chars.  No markup here.
+del.icio.us cached++ displays a list of the latest bookmarks on a del.icio.us account, from its RSS feed, keeping the feed cached in the database.
 
 == Description ==
 
-Delicious Cached++ uses the built-in MagpieRSS engine functions to create a list of the latest bookmarks on a del.icio.us account, from its RSS feed, keeping the feed cached in the database.
+del.icio.us cached++ uses the built-in MagpieRSS engine functions to create a list of the latest bookmarks on a del.icio.us account, from its RSS feed, keeping the feed cached in the database.
 
 This plugin respects del.icio.us' ToS and will not to overload the feed with subsequent requests, since the default cache refresh period is 60 minutes.
 
