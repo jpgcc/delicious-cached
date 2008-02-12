@@ -1,7 +1,7 @@
 === del.icio.us cached++ ===
 Contributors: jcraveiro
 Donate link: http://example.com/
-Tags: delicious, bookmarks
+Tags: del.icio.us, delicious, bookmarks, widget, integration, list
 Requires at least: 2.0
 Tested up to: 2.3.1
 Stable tag: trunk
