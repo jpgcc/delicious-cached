@@ -3,7 +3,7 @@ Contributors: jcraveiro
 Donate link: http://example.com/
 Tags: delicious, bookmarks
 Requires at least: 2.0
-Tested up to: 2.3
+Tested up to: 2.3.1
 Stable tag: trunk
 
 Here is a short description of the plugin.  This should be no more than 150 chars.  No markup here.
@@ -12,15 +12,15 @@ Here is a short description of the plugin.  This should be no more than 150 char
 
 Delicious Cached++ uses the built-in MagpieRSS engine functions to create a list of the latest bookmarks on a del.icio.us account, from its RSS feed, keeping the feed cached in the database.
 
-This plugin respects del.icio.us' will not to overload the feed with subsequent request, since the default cache refresh period is 60 minutes.
+This plugin respects del.icio.us' ToS and will not to overload the feed with subsequent requests, since the default cache refresh period is 60 minutes.
 
 Since version 1.3, the plugin is wigdet compatible. To take advantage of that, you'll need either 1) Wordpress 2.2 or higher, or 2) the Widgets plugin. You can still use the plugin without this feature (on WordPress 2.0/2.1 and/or along with a theme that's not widget compatible); just check the FAQ.
 
 == Installation ==
 
 1. Download the source code
-2. Extract the file delicious_cached_pp.php from the ZIP archive
-3. Upload the file delicious_cached_pp.php into your Wordpress install wp-content/plugins folder
+2. Extract the file `delicious_cached_pp.php` from the ZIP archive
+3. Upload the file `delicious_cached_pp.php` into your Wordpress install wp-content/plugins folder
 4. Activate the from Wordpress administration
 5. (For Wordpress 2.2+ with compatible theme) Go to *Presentation* > *Widgets*. Add the widget to the sidebar of your liking and/or setup any options you want to change.
 
@@ -33,6 +33,8 @@ Yes. The default invocation is:
 `<ul>`
 `<?php delicious_pp('accountname'); ?>`
 `</ul>`
+
+Advanced invocations will be properly documented soon, but can be learned of by looking at the plugin source code.
 
 = What about foo bar? =
 
