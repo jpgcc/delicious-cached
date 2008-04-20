@@ -155,7 +155,7 @@ function widget_deliciouspp_init() {
 
 		$title = htmlspecialchars($options['title'], ENT_QUOTES);
 		$username = htmlspecialchars($options['username'], ENT_QUOTES);
-		$numitems = htmlspecialchars($options['count'], ENT_QUOTES));
+		$numitems = htmlspecialchars($options['count'], ENT_QUOTES);
 		
 		echo '<p style="text-align:right;"><label for="deliciouspp-title">Title: <input style="width: 200px;" id="deliciouspp-title" name="deliciouspp-title" type="text" value="'.$title.'" /></label></p>';
 		echo '<p style="text-align:right;"><label for="deliciouspp-username">Username: <input style="width: 200px;" id="deliciouspp-username" name="deliciouspp-username" type="text" value="'.$username.'" /></label></p>';
