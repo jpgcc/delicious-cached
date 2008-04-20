@@ -1,5 +1,5 @@
 === del.icio.us cached++ ===
-Contributors: jcraveiro
+Contributors: jcraveiro, martin10
 Donate link: http://example.com/
 Tags: del.icio.us, delicious, bookmarks, widget, integration, list
 Requires at least: 2.0
@@ -14,7 +14,7 @@ del.icio.us cached++ uses the built-in MagpieRSS engine functions to create a li
 
 This plugin respects del.icio.us' ToS and will not to overload the feed with subsequent requests, since the default cache refresh period is 60 minutes.
 
-Since version 1.3, the plugin is wigdet compatible. To take advantage of that, you'll need either 1) Wordpress 2.2 or higher, or 2) the Widgets plugin. You can still use the plugin without this feature (on WordPress 2.0/2.1 and/or along with a theme that's not widget compatible); just check the FAQ.
+Since version 1.3 (alphas included), the plugin is wigdet compatible. To take advantage of that, you'll need either 1) Wordpress 2.2 or higher, or 2) the Widgets plugin. You can still use the plugin without this feature (on WordPress 2.0/2.1 and/or along with a theme that's not widget compatible); just check the FAQ.
 
 == Installation ==
 

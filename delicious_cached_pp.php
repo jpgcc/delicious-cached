@@ -3,7 +3,7 @@
 Plugin Name: del.icio.us cached++
 Plugin URI: http://wordpress.org/extend/plugins/delicious-cached/
 Description: Outputs del.icio.us bookmarks. Uses Wordpress built-in MagpieRSS to retrieve and to cache.
-Version: 1.3a
+Version: 1.3a2
 Author: João Craveiro
 Author URI: http://www.jcraveiro.com/
 */
@@ -77,7 +77,8 @@ function delicious_pp(
             $linkExtended = '';
         }
 
-          // Add this item's markup to the final output
+        // Add this item's markup to the final output
+        $linkText = htmlspecialchars($linkText);
         $output .=  $before."<a href='$linkLink' title='$linkTitle'>$linkText</a>\n".
                         $linkExtended."\n".$linkTags.$after."\n";
     }
@@ -147,15 +148,18 @@ function widget_deliciouspp_init() {
 		if ( $_POST['deliciouspp-submit'] ) {
 			$options['title'] = strip_tags(stripslashes($_POST['deliciouspp-title']));
 			$options['username'] = strip_tags(stripslashes($_POST['deliciouspp-username']));
+			$options['count'] = intval(strip_tags(stripslashes($_POST['deliciouspp-count'])));
 			// TBD: update other options
 			update_option('widget_deliciouspp', $options);
 		}
 
 		$title = htmlspecialchars($options['title'], ENT_QUOTES);
 		$username = htmlspecialchars($options['username'], ENT_QUOTES);
+		$numitems = htmlspecialchars($options['count'], ENT_QUOTES));
 		
 		echo '<p style="text-align:right;"><label for="deliciouspp-title">Title: <input style="width: 200px;" id="deliciouspp-title" name="deliciouspp-title" type="text" value="'.$title.'" /></label></p>';
 		echo '<p style="text-align:right;"><label for="deliciouspp-username">Username: <input style="width: 200px;" id="deliciouspp-username" name="deliciouspp-username" type="text" value="'.$username.'" /></label></p>';
+		echo '<p style="text-align:right;"><label for="deliciouspp-count">Link count: <input style="width: 200px;" id="deliciouspp-count" name="deliciouspp-count" type="text" value="'.$numitems.'" /></label></p>';		
 		echo '<input type="hidden" id="deliciouspp-submit" name="deliciouspp-submit" value="1" />';
 	}		
 
