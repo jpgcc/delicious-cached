@@ -36,9 +36,12 @@ Yes. The default invocation is:
 
 Advanced invocations will be properly documented soon, but can be learned of by looking at the plugin source code.
 
-= What about foo bar? =
+= Can I display only bookmarks that belong to a given tag? =
 
-Answer to foo bar dilemma.
+Yes. To accomplish that, go to *Presentation* > *Widgets* and fill in `username`/`tag` 
+instead of `username` in the Username field. E.g., if your username is `johndoe`
+and you want to display your bookmarks tagged `Cooking`, you should fill in the 
+username field with `johndoe/Cooking`.
 
 == Screenshots ==
 
