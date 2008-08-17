@@ -1,4 +1,4 @@
-	<?php
+<?php
 /*
 Plugin Name: del.icio.us cached++
 Plugin URI: http://wordpress.org/extend/plugins/delicious-cached/
