@@ -1,5 +1,5 @@
 === del.icio.us cached++ ===
-Contributors: jcraveiro, martin10
+Contributors: jcraveiro, martin10, donangel
 Donate link: http://example.com/
 Tags: del.icio.us, delicious, bookmarks, widget, integration, list
 Requires at least: 2.0
