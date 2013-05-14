@@ -3,7 +3,7 @@ Contributors: jcraveiro, martin10, donangel
 Donate link: http://example.com/
 Tags: del.icio.us, delicious, bookmarks, widget, integration, list
 Requires at least: 2.0
-Tested up to: 2.7
+Tested up to: 3.5
 Stable tag: trunk
 
 del.icio.us cached++ displays a list of the latest bookmarks on a del.icio.us account, from its RSS feed, keeping the feed cached in the database.
@@ -14,14 +14,14 @@ del.icio.us cached++ uses the built-in MagpieRSS engine functions to create a li
 
 This plugin respects del.icio.us' ToS and will not to overload the feed with subsequent requests, since the default cache refresh period is 60 minutes.
 
-Since version 1.3 (alphas included), the plugin is wigdet compatible. To take advantage of that, you'll need either 1) Wordpress 2.2 or higher, or 2) the Widgets plugin. You can still use the plugin without this feature (on WordPress 2.0/2.1 and/or along with a theme that's not widget compatible); just check the FAQ.
+Since version 1.3, the plugin is wigdet compatible. To take advantage of that, you'll need either 1) Wordpress 2.2 or higher, or 2) the Widgets plugin. You can still use the plugin without this feature (on WordPress 2.0/2.1 and/or along with a theme that's not widget compatible); just check the FAQ.
 
 == Installation ==
 
 1. Download the source code
 2. Extract the file `delicious_cached_pp.php` from the ZIP archive
 3. Upload the file `delicious_cached_pp.php` into your Wordpress install wp-content/plugins folder
-4. Activate the from Wordpress administration
+4. Activate the plugin from Wordpress administration
 5. (For Wordpress 2.2+ with compatible theme) Go to *Presentation* > *Widgets*. Add the widget to the sidebar of your liking and/or setup any options you want to change.
 
 == Frequently Asked Questions ==
