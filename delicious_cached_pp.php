@@ -38,7 +38,7 @@ function delicious_pp(
     $afterTags='</p>'
     ) {
     require_once(ABSPATH . WPINC . '/rss-functions.php');
-    $feedLocation = "http://feeds.delicious.com/v2/rss/".$username;
+    $feedLocation = "http://feeds.del.icio.us/v2/rss/".$username;
 
     $feedContent = @fetch_rss($feedLocation);
     $feedItems = $feedContent->items;
