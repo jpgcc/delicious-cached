@@ -6,12 +6,7 @@ del.icio.us cached++ uses the built-in MagpieRSS engine functions to create a li
 
 This plugin respects del.icio.us' ToS and will not to overload the feed with subsequent requests, since the default cache refresh period is 60 minutes.
 
-Since version 1.3, the plugin is wigdet compatible. To take advantage of that, you'll need either
-
-1. Wordpress 2.2 or higher; or
-2. the Widgets plugin. 
-
-You can still use the plugin without this feature (on WordPress 2.0/2.1 and/or along with a theme that's not widget compatible); just check the FAQ.
+The plugin is wigdet compatible, and allows multiple widgets with independent options.
 
 ## Installation (Wordpress 2.2+ with widget-ready theme)
 
@@ -24,19 +19,8 @@ You can still use the plugin without this feature (on WordPress 2.0/2.1 and/or a
 
 ## Can I use the plugin without widgets support?
 
-Yes. The default invocation is:
-
-```
-<ul>
-<?php delicious_pp('accountname'); ?>
-</ul>
-```
-
-Advanced invocations will be properly documented soon, but can be learned of by looking at the plugin source code.
+Not anymore (since version 2.0).
 
 ## Can I display only bookmarks that belong to a given tag?
 
-Yes. To accomplish that, go to *Presentation* > *Widgets* and fill in `username`/`tag` 
-instead of `username` in the Username field. E.g., if your username is `johndoe`
-and you want to display your bookmarks tagged `Cooking`, you should fill in the 
-username field with `johndoe/Cooking`.
+Yes, and since version 2.0 this is made explicit. To accomplish that, go to *Presentation* > *Widgets* and fill in the optional Tag field.
