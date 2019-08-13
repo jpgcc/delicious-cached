@@ -3,7 +3,7 @@
 Plugin Name: del.icio.us cached++
 Plugin URI: http://wordpress.org/extend/plugins/delicious-cached/
 Description: Outputs del.icio.us bookmarks. Uses Wordpress built-in MagpieRSS to retrieve and to cache.
-Version: 2.0
+Version: 2.5
 Author: João Craveiro
 Author URI: http://www.jcraveiro.com/
 */
