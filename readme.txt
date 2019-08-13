@@ -3,8 +3,8 @@ Contributors: jcraveiro, martin10, donangel
 Donate link: 
 Tags: del.icio.us, delicious, bookmarks, widget, integration, list
 Requires at least: 2.2
-Tested up to: 4.5.2
-Stable tag: 2.0
+Tested up to: 5.5.2
+Stable tag: 2.5
 
 del.icio.us cached++ displays a list of the latest bookmarks on a del.icio.us account, from its RSS feed, keeping the feed cached in the database.
 
